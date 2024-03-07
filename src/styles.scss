@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '/src/colors.scss';
+
 @font-face {
     font-family: iranian-sans;
     src: url(assets/fonts/irsans_p30download.com.ttf);
+}
+
+body{
+    background-color: $background-color;
 }

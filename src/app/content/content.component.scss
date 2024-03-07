@@ -1,0 +1,48 @@
+@import '/src/colors.scss';
+
+$circle-size:24px;
+$border-size:2px;
+$gap-size:8px;
+$icon-width:12px;
+$icon-height:10px;
+$icon-top:3px;
+
+.option{
+    display: flex;
+    flex-direction: row-reverse;
+    color: $disabled-color-text;
+    align-items: center;
+    column-gap: $gap-size;
+
+    .circle{
+        width: $circle-size;
+        height: $circle-size;
+        color: $disbaled-color-border;
+        background-color: $background-color;
+        border-radius: 50%;
+        border: $border-size solid $disbaled-color-border;
+        text-align: center;
+        img{
+            position: relative;
+            width: $icon-width;
+            height: $icon-height;
+            top: $icon-top;
+
+        }
+    }
+    .circle.checked{
+        background-color: $checked-option;
+        border-color: $checked-option;
+    }
+    .content{
+        color: $disabled-color-text;
+        font-family: 'iranian-sans';
+        font-size: 0.9rem;
+    }
+    .content.checked{
+        color: $selected-option;
+    }
+}
+
+
+

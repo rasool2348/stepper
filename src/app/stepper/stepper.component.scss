@@ -1,0 +1,75 @@
+@import 'src/colors.scss';
+
+$container-height:74px;
+$circle-size:58px;
+$border-size:2px;
+$img-top:16px;
+$text-height:19px;
+$text-margin-top:10px;
+
+.container{
+    position: relative;
+    color: $main-color;
+    text-align: center;
+    background-color: $background-color;
+    width: 100%;
+    height: $container-height;
+}
+.circle{
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $white-color;
+    border: $border-size solid $main-color;
+    border-radius: 50%;
+    margin: auto;
+    img{
+        position: relative;
+        top: $img-top;
+    }
+}
+.circle.inactive{
+    border-color: $disbaled-color-border;
+}
+
+.text{
+    font-family: 'iranian-sans';
+    font-size: 1rem;
+    height: $text-height;
+    width: 100%;
+    margin-top: $text-margin-top;
+}
+.text.selected{
+    font-weight: bolder;
+}
+
+.text.inactive{
+    color: $disabled-color-text;
+}
+
+
+$img-top-mobile:10px;
+$circle-size-mobile-selected:44px;
+$circle-size-mobile:24px;
+$circle-margin-top:5px;
+@media only screen and (max-width: 600px) {
+    .text{
+        display: none;
+    }
+    .circle{
+        border: none;
+        background-color: $background-color;
+        width: $circle-size-mobile;
+        height: $circle-size-mobile;
+        margin-top: $circle-margin-top;
+        img{
+            top:$img-top-mobile;
+        }
+
+    }
+    .circle.selected{
+        background-color: $white-color;
+        border: $border-size solid $main-color;
+        width: $circle-size-mobile-selected;
+        height: $circle-size-mobile-selected;
+    }
+}

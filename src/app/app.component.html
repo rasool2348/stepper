@@ -1,1 +1,20 @@
-<span>پرداخت</span>
+<div class="container">
+    <div class="stepper">
+        <app-stepper [content]="{name:'تقویم',imgAddress:'assets/icons/Group.svg',imgAddressInactive:'assets/icons/Group.svg'}"></app-stepper>
+        <div class="line"></div>
+        <app-stepper [content]="{name:'جزئیات',imgAddress:'assets/icons/information.png',imgAddressInactive:'assets/icons/information.png'}"></app-stepper>
+        <div class="line"></div>
+        <app-stepper [content]="{name:'پرداخت',imgAddress:'assets/icons/payments.svg',imgAddressInactive:'assets/icons/payments-inactive.svg'}" [selected]="true"></app-stepper>
+        <div class="line inactive"></div>
+        <app-stepper [content]="{name:'پرداخت',imgAddress:'assets/icons/payments.svg',imgAddressInactive:'assets/icons/payments-inactive.svg'}" [inactive]="true"></app-stepper>
+        <div class="line inactive"></div>
+        <app-stepper [content]="{name:'پرداخت',imgAddress:'assets/icons/payments.svg',imgAddressInactive:'assets/icons/payments-inactive.svg'}" [inactive]="true"></app-stepper>
+    
+    </div>
+    <div class="content">
+        <span class="selected-content">پرداخت هزینه درخواست</span>
+        <app-content [data]="{checked:true,text:'پرداخت هزینه درخواست'}"></app-content>
+        <app-content [data]="{checked:false,text:'پرداخت هزینه درخواست'}"></app-content>
+        <app-content [data]="{checked:false,text:'پرداخت هزینه درخواست'}"></app-content>
+    </div>
+</div>

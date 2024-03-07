@@ -1,6 +1,71 @@
+@import '/src/colors.scss';
 
+$container-height:200px;
+$line-margin-top:29px;
+$flex-gap:6px;
+$line-height:1px;
 
-span{
-    font-size: 100px;
-    font-family: 'iranian-sans';
+.container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex:0 0 100%;
+    height: $container-height;
+    width: 100%;
+    background-color: $background-color;
+    row-gap: $flex-gap;
+    app-stepper{
+        display: flex;
+    }
 }
+
+.line{
+    background-color: $main-color;
+    display: flex;
+    flex:1;
+    height: $line-height;
+    margin-top: $line-margin-top;
+}
+.line.inactive{
+    background-color: $disabled-color-line;
+}
+
+.stepper{
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: $flex-gap;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: $flex-gap;
+    justify-content: center;
+    position: relative;
+    right: 50%;
+    flex: 1;
+    .selected-content{
+        font-family: 'iranian-sans';
+        font-size: 1.1rem;
+        font-weight: bolder;
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .content{
+        right: 1%;
+        .selected-content{
+            display: flex;
+            flex-direction: row-reverse;
+            color:$main-color;
+        }
+    }
+    .line.inactive{
+        background-color: transparent;
+        border-top: $line-height dashed $disabled-color-line;
+    }
+    
+}
+
+

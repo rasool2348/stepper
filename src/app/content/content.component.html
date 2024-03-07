@@ -1,0 +1,8 @@
+<div class="option">
+    <div class="circle" [class.checked]="data.checked">
+        <img src="assets/icons/Path.png" alt="" *ngIf="data.checked">
+    </div>
+    <div class="content" [class.checked]="data.checked">
+        {{data.text}}
+    </div>
+</div>

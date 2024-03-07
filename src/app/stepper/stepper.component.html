@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="circle" [class.selected]="selected" [class.inactive]="inactive">
+        <img [src]="inactive ? content.imgAddressInactive : content.imgAddress" alt="">
+    </div>
+    <p class="text" [class.selected]="selected" [class.inactive]="inactive">
+        {{content.name}}
+    </p>
+</div>
